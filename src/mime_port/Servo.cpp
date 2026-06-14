@@ -68,8 +68,14 @@ void Servo::wake()
     }
 }
 
+double Servo::getCurrentAngle() const //const garante que a função não altere atributos da classe
+{
+    return currentAngle_;
+}
+
 void Servo::updateServo() //Atualiza a posição do servo
 {
+
     int PulseWidth = calculatePulseWidth(currentAngle_);
     lastPulseWidth_ = PulseWidth;
 
@@ -78,9 +84,12 @@ void Servo::updateServo() //Atualiza a posição do servo
 
 void Servo::calculatePulseWidth(double angle) const //const garante que a função não altere atributos da classe
 {
-    return static_cast<int>(
-        std::floor(
-            conf_.maxPulse - 
-        )
-    )
+        double fractionAngle = (angle - conf_.minAngle) /
+                               (conf_.maxAngle - conf_.minAngle);
+
+        double deltaPulse = conf_.maxPulse - conf_.minPulse;
+
+        double pulse = conf_.minPulse + (fraction_angle * deltaPulse);
+
+    return static_cast<int>(std::floor(pulse));
 }
