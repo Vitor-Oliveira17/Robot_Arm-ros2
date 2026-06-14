@@ -9,6 +9,7 @@ add_executable(braco
     src/main.cpp
     src/servo.cpp
     src/joystick.cpp
+    src/servoSleep.cpp
 )
 
 target_link_libraries(braco
