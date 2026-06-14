@@ -14,7 +14,6 @@ add_executable(braco
 
 target_link_libraries(braco
     pigpio
-    pthread
 )
 
 target_include_directories(braco PUBLIC
