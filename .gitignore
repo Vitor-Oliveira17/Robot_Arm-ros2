@@ -1,69 +1,61 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
+# ROS 2 Workspace
 build/
-Build/
-build-*/
+install/
+log/
 
-# CMake generated files
+# Colcon
+.colcon/
+.colcon_install_layout
+
+# CMake
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
-install_manifest.txt
 compile_commands.json
 
-# Temporary files
-*.tmp
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.so
+.venv/
+venv/
+env/
+
+pip-wheel-metadata/
+
+# VS Code
+.vscode/
+
+# Linux
+.DS_Store
+Thumbs.db
+
+# ROS Launch Dumps
 *.log
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Testing
+.pytest_cache/
+test_results/
+
+# Temporary Files
+tmp/
+temp/
+
+# Generated Documentation
+docs/build/
+
+# Raspberry Pi Specific
 *.bak
-*.swp
+*.orig
 
-# vcpkg
-vcpkg_installed/
-
-# debug information files
-*.dwo
-
-# test output & cache
-Testing/
-.cache/
+# Servo Calibration Files
+calibration.yaml
+servo_offsets.yaml
