@@ -7,13 +7,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(braco
     src/main.cpp
-    src/servo.cpp
-    src/joystick.cpp
+    src/mime_port/servo.cpp
+    src/mimeport/joystick.cpp
 )
 
 target_link_libraries(braco
     pigpio
-    pthread
 )
 
 target_include_directories(braco PUBLIC
